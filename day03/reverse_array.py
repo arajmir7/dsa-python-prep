@@ -1,19 +1,12 @@
+def reverse_array(arr, left, right):
+    
+    if left >= right:
+        return
+    
+    arr[left], arr[right] = arr[right], arr[left]
+    reverse_array(arr, left + 1, right - 1)
 
-# Recursive function to calculate Fibonacci number
-def fibonacci(n):
-    # Base case: fib(0) = 0
-    if n == 0:
-        return 0
+arr = [1, 2, 3, 4, 5]
+reverse_array(arr, 0, len(arr) - 1)
 
-    # Base case: fib(1) = 1
-    if n == 1:
-        return 1
-
-    # Recursive case: sum of previous two Fibonacci numbers
-    return fibonacci(n - 1) + fibonacci(n - 2)
-
-# Define the position in Fibonacci series
-n = 5
-
-# Call the function and print the result
-print(fibonacci(n))
+print(arr)
