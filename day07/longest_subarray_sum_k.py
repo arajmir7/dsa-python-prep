@@ -16,7 +16,7 @@ class Solution:
             if prefix_sum not in seen:
                 seen[prefix_sum] = i
 
-        return max_len
+        return max_len                         
 
 arr = [1, 2, 3, 1, 1, 1, 1]
 k = 3
